@@ -39,6 +39,72 @@
       background-color: #005bb5;
     }
   </style>
+
+
+<!-- prod, WEB SDK 최신 버전 -->
+<script>!function(e,r){if(void 0!==e&&!e.adbrix){var o={queue:[]},t=navigator.userAgent.toLowerCase(),c=r.createElement("script"),a="Netscape"===navigator.appName&&-1!==navigator.userAgent.search("Trident")||-1!==t.indexOf("msie")?"abx-web-sdk.ie.min.js":"abx-web-sdk.min.js";c.type="text/javascript",c.async=!0,c.src="//static.adbrix.io/web-sdk/latest/"+a,c.onload=function(){e.adbrix.runQueuedFunctions?e.adbrix.runQueuedFunctions():console.log("[adbrix] Error: could not load SDK")};var i=r.getElementsByTagName("script")[0];i.parentNode.insertBefore(c,i);["init","onInitialized","login","getUserId","logout","userProperty.get","userProperty.getAll","userProperty.addOrUpdate","userProperty.remove","userProperty.removes","common.signUp","common.invite","common.useCredit","common.purchase","event.send","debug.traceListener","commerceAttr.categories","commerceAttr.product","commerce.viewHome","commerce.categoryView","commerce.productView","commerce.addToCart","commerce.addToWishList","commerce.reviewOrder","commerce.refund","commerce.search","commerce.share","commerce.listView","commerce.cartView","commerce.paymentInfoAdded","game.tutorialComplete","game.characterCreated","game.stageCleared","game.levelAchieved"].forEach(function(e){var r=e.split("."),t=r.pop();r.reduce(function(e,r){return e[r]=e[r]||{}},o)[t]=function(){o.queue.push([e,arguments])}}),e.adbrix=o}}(window,document);</script>
+
+<script>
+    
+    window.adbrix.init({
+        appkey: 'gwvpIbxez0yYYeJ1FWTiqw',
+        webSecretkey: 'k9pB39amOEaEezOvu3BUzQ',
+        
+        // isExecPageViewEvent : false,
+        // transport : 1,
+        
+        // appkey: 'RHVbFIofrUm4JXSVWvc0mg',
+        // webSecretkey: 'mj2kvH7FL0Gdv15yaX2Cuw',
+
+        
+        // push 설정
+        push : {
+         enable : true,
+         serviceWorkerOptions : {
+            file_name : 'service-worker.js',
+            file_path : '/',
+            scope : '/'
+         },
+      },
+
+      
+      inWebMessage: {
+	    enable: true,
+	    //openInNewWindow: true, 
+	    zIndex : 9999,
+	    fetchListener: function(message){
+	     console.log('fetch_listener '+message);
+	    },
+	    clickListener: function(actionId, actionType, actionArg, isClosed){
+	    console.log('click_listener '+ 'actionID: '+actionId+ 'actionType : '+ actionType+ 'actionArg : ' + actionArg+ 'isClosed; ' + isClosed);
+
+
+		  },
+	  },
+      traceLevel:3,
+      traceListener: function (message, level) {
+        const customEvents = ['custom_event'];
+        const isCustomEvent = customEvents.some(event => message.includes(event));
+
+            console.log(`[Trace Level ${level}] ${message}`);
+
+            // if (isCustomEvent) {
+
+
+        
+            //     alert(`[Trace Level ${level}] ${message}`);
+            // }
+
+            // alert(`[Trace Level ${level}] ${message}`);
+            // $vm.logs.push(message);
+            // $vm.$nextTick(function () {
+            // });
+        }
+    });
+
+</script>
+
+        
 </head>
 <body>
   <!-- 콘텐츠 -->
