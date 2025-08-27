@@ -7,6 +7,16 @@
   "background_color": "#ffffff",
   "theme_color": "#317EFB",
   "icons": [
+  {
+      "src": "test/icons/icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "test/icons/icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
   ],
   "safari_push_id": "web.rkapf26.github.io"
 }
