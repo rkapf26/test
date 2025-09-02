@@ -1,7 +1,7 @@
 {
   "name": "내 iOS PWA",
   "short_name": "iOSPWA",
-  "start_url": "/test/index.html",
+  "start_url": "/test/home.html",
   "scope": "/test/",
   "display": "standalone",
   "background_color": "#ffffff",
