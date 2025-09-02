@@ -135,6 +135,31 @@ function push_show_prompt()
 }
 </script>
 
+	  <script>
+    // 사용자가 PWA를 처음 열 때 스크립트 초기화
+    document.addEventListener('DOMContentLoaded', function () {
+      console.log("PWA is loaded and initialized.");
+      initApp(); // 초기화 함수 호출
+    });
+
+    // 사용자가 PWA를 다시 활성화할 때 스크립트 재실행
+    document.addEventListener('visibilitychange', function () {
+      if (document.visibilityState === 'visible') {
+        console.log("PWA is re-activated. Re-initializing scripts...");
+        initApp(); // 재실행할 함수 호출
+      }
+    });
+
+    // 초기화 함수 작성
+    function initApp() {
+      console.log("Running Initialization Logic...");
+
+      // 예: PWA 앱 초기화 코드
+      alert("Welcome to the PWA!");
+      // 필요한 추가 스크립트나 데이터를 초기화하면 됩니다.
+    }
+  </script>
+
 	
 </body>
 </html>  
