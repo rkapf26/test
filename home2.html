@@ -62,6 +62,46 @@
   <h1>DFN2.0 Web Test</h1>
   <p> 테스트 페이지 1 </p>
 
+
+	<!-- 사용자 입력 필드 -->
+<input type="text" id="externalIdInput" placeholder="External ID">  <button onclick="setExternalId()">Set External ID</button> <br>
+<input type="text" id="emailInput" placeholder="Email">  <button onclick="setEmail()">Set Email</button> <br>
+<input type="text" id="phoneInput" placeholder="Phone Number">  <button onclick="setPhone()">Set Phone Number</button> <br>
+<input type="text" id="kakaoIdInput" placeholder="Kakao User ID">  <button onclick="setKakaoId()">Set Kakao ID</button><br>
+<input type="text" id="lineIdInput" placeholder="Line User ID">   <button onclick="setLine()">Set Line ID</button> <br>
+
+
+
+<script>
+    // 한 개씩 호출하는 함수
+    function setExternalId() {
+        const externalId = document.getElementById('externalIdInput').value;
+        if (externalId) Dfinery.setIdentity(DFIdentity.EXTERNAL_ID, externalId);
+    }
+
+    function setEmail() {
+        const email = document.getElementById('emailInput').value;
+        if (email) Dfinery.setIdentity(DFIdentity.EMAIL, email);
+    }
+
+    function setPhone(){
+        const phone = document.getElementById('phoneInput').value;
+        if (phone) Dfinery.setIdentity(DFIdentity.PHONE_NO, phone);
+    }
+
+    function setKakaoId(){
+        const kakaoId = document.getElementById('kakaoIdInput').value;
+        if (kakaoId) Dfinery.setIdentity(DFIdentity.KAKAO_USER_ID, kakaoId);
+
+    }
+
+    function setLine(){
+        const lineId = document.getElementById('lineIdInput').value; 
+        if (lineId) Dfinery.setIdentity(DFIdentity.LINE_USER_ID, lineId);
+    }
+    </script>
+
+	
   </body>
   </html>  
 
