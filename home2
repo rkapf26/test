@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="manifest" href="/test/manifest.json">
+	
+  <title>Home Page</title>
+  <style>
+    /* CSS를 직접 HTML에 작성 */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f9f9f9;
+      color: #333;
+      text-align: center;
+    }
+
+    h1 {
+      color: #0078D7;
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 15px;
+      text-decoration: none;
+      background-color: #0078D7;
+      color: white;
+      border-radius: 5px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    a:hover {
+      background-color: #005bb5;
+    }
+  </style>
+
+    <script>
+    // SDK 최신버젼 설치
+!function(_,e){if(void 0!==_&&!_.Dfinery){var d={queue:[]},t=e.createElement("script");t.type="text/javascript",t.async=!0,t.src="//static.dfinery.io/web-sdk/latest/dfn-web-sdk.min.js",t.onload=function(){_.Dfinery.runQueuedFunctions&&_.Dfinery.runQueuedFunctions()};var n=e.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n);["init","onInitialized","logEvent","setUserProfile","setUserProfiles","setIdentity","setIdentities","resetIdentity"].forEach((function(_){var e=_.split("."),t=e.pop();e.reduce((function(_,e){return _[e]=_[e]||{}}),d)[t]=function(){d.queue.push([_,arguments])}}));const i={LOGIN:"df_login",LOGOUT:"df_logout",SIGN_UP:"df_sign_up",PURCHASE:"df_purchase",REFUND:"df_refund",VIEW_HOME:"df_view_home",VIEW_PRODUCT_DETAILS:"df_view_product_details",ADD_TO_CART:"df_add_to_cart",ADD_TO_WISHLIST:"df_add_to_wishlist",VIEW_SEARCH_RESULT:"df_view_search_result",SHARE_PRODUCT:"df_share_product",VIEW_LIST:"df_view_list",VIEW_CART:"df_view_cart",REMOVE_CART:"df_remove_cart",ADD_PAYMENT_INFO:"df_add_payment_info"},E={ITEMS:"df_items",ITEM_ID:"df_item_id",ITEM_NAME:"df_item_name",ITEM_PRICE:"df_price",ITEM_QUANTITY:"df_quantity",ITEM_DISCOUNT:"df_discount",ITEM_CATEGORY1:"df_category1",ITEM_CATEGORY2:"df_category2",ITEM_CATEGORY3:"df_category3",ITEM_CATEGORY4:"df_category4",ITEM_CATEGORY5:"df_category5",DISCOUNT:"df_discount",TOTAL_REFUND_AMOUNT:"df_total_refund_amount",ORDER_ID:"df_order_id",DELIVERY_CHARGE:"df_delivery_charge",PAYMENT_METHOD:"df_payment_method",TOTAL_PURCHASE_AMOUNT:"df_total_purchase_amount",SHARING_CHANNEL:"df_sharing_channel",SIGN_CHANNEL:"df_sign_channel",KEYWORD:"df_keyword"},f={MALE:"Male",FEMALE:"Female",NON_BINARY:"NonBinary",OTHER:"Other"},r={EXTERNAL_ID:"external_id",EMAIL:"email",PHONE_NO:"phone_no",KAKAO_USER_ID:"kakao_user_id",LINE_USER_ID:"line_user_id",UNIFIED_ID:"unified_id"},o={BIRTH:"df_birth",GENDER:"df_gender",NAME:"df_name",MEMBERSHIP:"df_membership",PUSH_OPTIN:"df_push_optin",PUSH_ADS_OPTIN:"df_push_ads_optin",PUSH_NIGHT_ADS_OPTIN:"df_push_night_ads_optin",SMS_ADS_OPTIN:"df_sms_ads_optin",KAKAO_ADS_OPTIN:"df_kakao_ads_optin"},a={LOG_ENABLE:"logEnable",LOG_LEVEL:"logLevel",SHARE_SUBDOMAIN_COOKIE:"shareSubdomainCookie"},I={DISABLE:0,ERROR:1,WARN:2,INFO:3};_.DFEvent=i,_.DFEventProperty=E,_.DFGender=f,_.DFIdentity=r,_.DFUserProfile=o,_.DFConfig=a,_.DFLogLevel=I,_.Dfinery=d}}(window,document);
+</script>
+
+  <script>
+  Dfinery.init('1me8zt', {
+  web: {
+    inWebMessage: {
+    }
+  }
+});
+</script>
+  </head>
+<body>
+  <!-- 콘텐츠 -->
+  <h1>DFN2.0 Web Test</h1>
+  <p> 테스트 페이지 1 </p>
+
+  </body>
+  </html>  
+
+    
